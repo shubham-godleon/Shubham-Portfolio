@@ -457,3 +457,15 @@ footer {
 footer p {
     text-align: center;
 }
+
+/* counter */
+
+.counter {
+    font-size: 1rem;
+    text-align: right;
+    margin-top: 2rem;
+}
+
+.counter-img {
+    margin-top: 1%;
+}
