@@ -333,7 +333,7 @@ section {
 
 .article-container {
     display: flex;
-    text-align: initial;
+    text-align: center;
     flex-wrap: wrap;
     flex-direction: row;
     gap: 2.5rem;
@@ -344,7 +344,8 @@ section {
 .article {
     display: flex;
     width: 10rem;
-    justify-content: space-evenly;
+    justify-content: center;
+    align-items: center;
     gap: 0.5rem;
 }
 
