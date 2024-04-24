@@ -329,6 +329,7 @@ section {
     justify-content: center;
     flex-direction: column;
     margin-top: 0.5rem;
+    flex-wrap: wrap;
 }
 
 .article-container {
@@ -363,6 +364,9 @@ article .icon {
 #projects {
     position: relative;
     margin-top: 3rem ;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
 
 .color-container {
@@ -406,6 +410,7 @@ article .icon {
 
 #positions {
     position: relative;
+    margin-top: 8rem;
 }
 
 /* contact  */
