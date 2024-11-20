@@ -1,196 +1,277 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>My Portfolio</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="mediaqueries.css">
-</head>
-<body>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="mediaqueries.css" />
+  </head>
+  <body>
     <nav id="desktop-nav">
-        <div class="logo">Shubham Kumar</div>
-        <div>
-            <ul class="nav-links">
-                <li><a href="#about">About</a></li>
-                <li><a href="#experience">Experience</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#positions">PORs</a></li>
-                <li><a href="#contact">Contact</a></li>
-                <li><a href="./blog.html">Blog</a></li>
-            </ul>
-        </div>
+      <div class="logo">Shubham Kumar</div>
+      <div>
+        <ul class="nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#positions">PORs</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="./blog.html">Blog</a></li>
+        </ul>
+      </div>
     </nav>
     <nav id="hamburger-nav">
-        <div class="logo">Shubham Kumar</div>
-        <div class="hamburger-menu">
-            <div class="hamburger-icon" onclick="toggleMenu()">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-            <div class="menu-links">
-                <li><a href="#about" onclick="toggleMenu()">About</a></li>
-                <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
-                <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
-                <li><a href="#positions" onclick="toggleMenu()">PORs</a></li>
-                <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
-                <li><a href="./blog.html" onclick="toggleMenu()">Blog</a></li>
-            </div>
+      <div class="logo">Shubham Kumar</div>
+      <div class="hamburger-menu">
+        <div class="hamburger-icon" onclick="toggleMenu()">
+          <span></span>
+          <span></span>
+          <span></span>
         </div>
+        <div class="menu-links">
+          <li><a href="#about" onclick="toggleMenu()">About</a></li>
+          <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
+          <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
+          <li><a href="#positions" onclick="toggleMenu()">PORs</a></li>
+          <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+          <li><a href="./blog.html" onclick="toggleMenu()">Blog</a></li>
+        </div>
+      </div>
     </nav>
     <section id="profile">
-        <div class="section__pic-container profile-pic">
-            <img src="./assets/profile-pic.png" alt="profile picture">
+      <div class="section__pic-container profile-pic">
+        <img src="./assets/profile-pic.png" alt="profile picture" />
+      </div>
+      <div class="section__text">
+        <p class="section__text__p1">Hello, I am</p>
+        <h1 class="title">Shubham Kumar</h1>
+        <p class="section__text__p2">Software Developer</p>
+        <div class="btn-container">
+          <button
+            class="btn btn-color-1"
+            onclick="window.open('./assets/ShubhamKumar_TechnicalResume2024.pdf')"
+          >
+            Download CV
+          </button>
+          <button class="btn btn-color-2" onclick="location.href='#contact'">
+            Contact Info
+          </button>
         </div>
-        <div class="section__text">
-            <p class="section__text__p1">
-                Hello, I am
-            </p>
-            <h1 class="title">Shubham Kumar</h1>
-            <p class="section__text__p2">Software Developer</p>
-            <div class="btn-container">
-                <button class="btn btn-color-1" onclick="window.open('./assets/ShubhamKumar_TechnicalResume2024.pdf')">
-                Download CV
-                </button>
-                <button class="btn btn-color-2" onclick="location.href='#contact'">
-                Contact Info
-                </button>
-            </div>
-            <div id="socials-container">
-                <img src="./assets/linkedin.png" alt="my linkedin"
-                class="icon" onclick="window.open('https://www.linkedin.com/in/shubham-kumar-83b39a168/' , '_blank', 'noopener, noreferrer')">
-                <img src="./assets/github.png" alt="my github" class="icon"
-                onclick="window.open('https://github.com/shubham-godleon' , '_blank', 'noopener, noreferrer')">
-            </div>
+        <div id="socials-container">
+          <img
+            src="./assets/linkedin.png"
+            alt="my linkedin"
+            class="icon"
+            onclick="window.open('https://www.linkedin.com/in/shubham-kumar-83b39a168/' , '_blank', 'noopener, noreferrer')"
+          />
+          <img
+            src="./assets/github.png"
+            alt="my github"
+            class="icon"
+            onclick="window.open('https://github.com/shubham-godleon' , '_blank', 'noopener, noreferrer')"
+          />
         </div>
+      </div>
     </section>
     <section id="about">
-        <p class="section__text__p1">Get to know more</p>
-        <h1 class="title">About Me</h1>
-        <div class="section-container">
-            <div class="section__pic-container">
-                <img src="./assets/about-pic.jpg" alt="Profile picture" class="about-pic">
-            </div>
-            <div class="about-details-container">
-                <div class="about-containers">
-                    <div class="details-container">
-                        <img src="./assets/experience.png" alt="experience icon" class="icon">
-                        <h3>Experience</h3>
-                        <p>1+ year <br> Software Development</p>
-                    </div>
-                    <div class="details-container">
-                        <img src="./assets/education.png" alt="education icon" class="icon">
-                        <h3>Education</h3>
-                        <p>B.Tech. Computer Engineering <br> Bachelors' Degree</p>
-                    </div>
-                </div>
-                <div class="text-container">
-                    <p>Currently, a software developer at BNY Mellon. Graduated From Delhi Technological University (Formerly DCE). A striving individual who believes in meritocracy. Love System Design, Problem Solving and Public Speaking. Hobbies include sketching, writing, cooking and anime.</p>
-                </div>
-            </div>
+      <p class="section__text__p1">Get to know more</p>
+      <h1 class="title">About Me</h1>
+      <div class="section-container">
+        <div class="section__pic-container">
+          <img
+            src="./assets/about-pic.jpg"
+            alt="Profile picture"
+            class="about-pic"
+          />
         </div>
-        <img src="./assets/arrow.png" alt="arrow icon" class="icon arrow" onclick="location.href='#experience'">
+        <div class="about-details-container">
+          <div class="about-containers">
+            <div class="details-container">
+              <img
+                src="./assets/experience.png"
+                alt="experience icon"
+                class="icon"
+              />
+              <h3>Experience</h3>
+              <p>
+                2+ years <br />
+                Software Development
+              </p>
+            </div>
+            <div class="details-container">
+              <img
+                src="./assets/education.png"
+                alt="education icon"
+                class="icon"
+              />
+              <h3>Education</h3>
+              <p>
+                B.Tech. Computer Engineering <br />
+                DTU 2022
+              </p>
+            </div>
+          </div>
+          <div class="text-container">
+            <p>
+              Currently, a Full Stack Engineer II at BNY. Graduated From Delhi
+              Technological University (Formerly DCE). A striving individual who
+              believes in meritocracy. Love System Design, Problem Solving and
+              Public Speaking. Hobbies include sketching, writing, cooking and
+              anime.
+            </p>
+          </div>
+        </div>
+      </div>
+      <img
+        src="./assets/arrow.png"
+        alt="arrow icon"
+        class="icon arrow"
+        onclick="location.href='#experience'"
+      />
     </section>
     <section id="experience">
-        <p class="section__text__p1">
-            Explore My
-        </p>
-        <h1 class="title">Technologies</h1>
-        <div class="experience-details-container">
-            <div class="about-containers">
-                <div class="details-container">
-                    <h2 class="experience-sub-title">Skills</h2>
-                    <div class="article-container">
-                        <article>
-                            <img src="./assets/checkmark.png" alt="Experience icon"
-                            class="icon">
-                            <div>
-                                <h3>HTML</h3>
-                            </div>
-                        </article>
-                        <article>
-                            <img src="./assets/checkmark.png" alt="Experience icon" class="icon">
-                            <div>
-                                <h3>CSS</h3>
-                            </div>
-                        </article>
-                        <article>
-                            <img src="./assets/checkmark.png" alt="Experience icon" class="icon">
-                            <div>
-                                <h3>JavaScript</h3>
-                            </div>
-                        </article>
-                        <article>
-                            <img src="./assets/checkmark.png" alt="Experience icon" class="icon">
-                            <div>
-                                <h3>Angular</h3>
-                            </div>
-                        </article>
-                        <article>
-                            <img src="./assets/checkmark.png" alt="Experience icon" class="icon">
-                            <div>
-                                <h3>TypeScript</h3>
-                            </div>
-                        </article>
-                        <article>
-                            <img src="./assets/checkmark.png" alt="Experience icon" class="icon">
-                            <div>
-                                <h3>C++</h3>
-                            </div>
-                        </article>
-                        <article>
-                            <img src="./assets/checkmark.png" alt="Experience icon" class="icon">
-                            <div>
-                                <h3>C</h3>
-                            </div>
-                        </article>
-                        <article>
-                            <img src="./assets/checkmark.png" alt="Experience icon" class="icon">
-                            <div>
-                                <h3>MySQL</h3>
-                            </div>
-                        </article>
-                        <article>
-                            <img src="./assets/checkmark.png" alt="Experience icon" class="icon">
-                            <div>
-                                <h3>SpringBoot</h3>
-                            </div>
-                        </article>
-                    </div>
+      <p class="section__text__p1">Explore My</p>
+      <h1 class="title">Technologies</h1>
+      <div class="experience-details-container">
+        <div class="about-containers">
+          <div class="details-container">
+            <h2 class="experience-sub-title">Skills</h2>
+            <div class="article-container">
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>HTML</h3>
                 </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>CSS</h3>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>JavaScript</h3>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Angular</h3>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>TypeScript</h3>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>C++</h3>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>C</h3>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>MySQL</h3>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>SpringBoot</h3>
+                </div>
+              </article>
             </div>
+          </div>
         </div>
-        <p class="section__text__p1">
-            &&
-        </p>
-        <h1 class="title">Work Experience</h1>
-        <div class="experience-details-container">
-            <div class="about-containers">
-                <div class="details-container">
-                    <img src="./assets/bny-mellon-logo.png" alt="bny logo" class="company-logo">
-                    <h2 class="experience-sub-title">BNY Mellon</h2>
-                    <h3>Software Development Engineer</h3>
-                    <p>July 2022 - Present</p>
-
-                </div>
-                <div class="details-container">
-                    <img src="./assets/scb-logo.png" alt="scb logo" class="company-logo">
-                    <h2 class="experience-sub-title">Standard Chartered</h2>
-                    <h3>Software Development Intern</h3>
-                    <p>May 2021 - July 2021</p>
-                </div>
-            </div>
+      </div>
+      <p class="section__text__p1">&&</p>
+      <h1 class="title">Work Experience</h1>
+      <div class="experience-details-container">
+        <div class="about-containers">
+          <div class="details-container">
+            <img
+              src="./assets/bny-mellon-logo.png"
+              alt="bny logo"
+              class="company-logo"
+            />
+            <h2 class="experience-sub-title">BNY</h2>
+            <h3>Software Development Engineer</h3>
+            <p>July 2022 - Present</p>
+          </div>
+          <div class="details-container">
+            <img
+              src="./assets/scb-logo.png"
+              alt="scb logo"
+              class="company-logo"
+            />
+            <h2 class="experience-sub-title">Standard Chartered</h2>
+            <h3>Software Development Intern</h3>
+            <p>May 2021 - July 2021</p>
+          </div>
         </div>
-        <img src="./assets/arrow.png" alt="arrow icon" class="icon arrow" onclick="location.href='#projects'">
+      </div>
+      <img
+        src="./assets/arrow.png"
+        alt="arrow icon"
+        class="icon arrow"
+        onclick="location.href='#projects'"
+      />
     </section>
     <section id="projects">
-        <p class="section__text__p1">Browse My</p>
-        <h1 class="title">Latest Projects</h1>
-        <div class="experience-details-container">
-            <div class="about-containers">
-            <!-- <div class="details-container color-container">
+      <p class="section__text__p1">Browse My</p>
+      <h1 class="title">Latest Projects</h1>
+      <div class="experience-details-container">
+        <div class="about-containers">
+          <!-- <div class="details-container color-container">
                 <div class="article-container">
                     <img src="./assets/project-hackkerrank.png" alt="project 1" class="project-img">
                 </div>
@@ -201,113 +282,212 @@
                         onclick="window.open('https://github.com/shubham-godleon/GodleoN-HackerranK' , '_blank', 'noopener, noreferrer')">Github</button>
                 </div>
             </div> -->
-            <div class="details-container color-container">
-                <div class="article-container">
-                    <img src="./assets/Saathi.png" alt="project 2" class="project-img">
-                </div>
-                <div class="experience-sub-title">Saathi for the Mute</div>
-                <div class="btn-container">
-                    <button class="btn btn-color-1 project-btn"
-                        onclick="window.open('https://github.com/shubham-godleon/Saathi-for-the-Autistic-and-Mute' , '_blank', 'noopener, noreferrer')">Live Demo</button>
-                    <button class="btn btn-color-1 project-btn"
-                        onclick="window.open('https://github.com/shubham-godleon/Saathi-for-the-Autistic-and-Mute' , '_blank', 'noopener, noreferrer')">Github</button>
-                </div>
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img
+                src="./assets/Saathi.png"
+                alt="project 2"
+                class="project-img"
+              />
             </div>
-            <div class="details-container color-container">
-                <div class="article-container">
-                    <img src="./assets/avengersmatch.png" alt="project 3" class="project-img">
-                </div>
-                <div class="experience-sub-title">Avengers Match</div>
-                <div class="btn-container">
-                    <button class="btn btn-color-1 project-btn"
-                        onclick="window.open('https://avengersmatch.netlify.app/' , '_blank', 'noopener, noreferrer')">Live Demo</button>
-                    <button class="btn btn-color-1 project-btn"
-                        onclick="window.open('https://github.com/shubham-godleon/avengersmatch' , '_blank', 'noopener, noreferrer')">Github</button>
-                </div>
+            <div class="experience-sub-title">Saathi for the Mute</div>
+            <div class="btn-container">
+              <button
+                class="btn btn-color-1 project-btn"
+                onclick="window.open('https://github.com/shubham-godleon/Saathi-for-the-Autistic-and-Mute' , '_blank', 'noopener, noreferrer')"
+              >
+                Live Demo
+              </button>
+              <button
+                class="btn btn-color-1 project-btn"
+                onclick="window.open('https://github.com/shubham-godleon/Saathi-for-the-Autistic-and-Mute' , '_blank', 'noopener, noreferrer')"
+              >
+                Github
+              </button>
             </div>
-            <div class="details-container color-container">
-                <div class="article-container">
-                    <img src="./assets/asciiArt.png" alt="project 4" class="project-img">
-                </div>
-                <div class="experience-sub-title">ASCII Art Generator</div>
-                <div class="btn-container">
-                    <button class="btn btn-color-1 project-btn"
-                        onclick="window.open('https://generateasciiart.netlify.app/' , '_blank', 'noopener, noreferrer')">Live
-                        Demo</button>
-                    <button class="btn btn-color-1 project-btn"
-                        onclick="window.open('https://github.com/shubham-godleon/Ascii-Image-Generator' , '_blank', 'noopener, noreferrer')">Github</button>
-                </div>
+          </div>
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img
+                src="./assets/avengersmatch.png"
+                alt="project 3"
+                class="project-img"
+              />
             </div>
+            <div class="experience-sub-title">Avengers Match</div>
+            <div class="btn-container">
+              <button
+                class="btn btn-color-1 project-btn"
+                onclick="window.open('https://avengersmatch.netlify.app/' , '_blank', 'noopener, noreferrer')"
+              >
+                Live Demo
+              </button>
+              <button
+                class="btn btn-color-1 project-btn"
+                onclick="window.open('https://github.com/shubham-godleon/avengersmatch' , '_blank', 'noopener, noreferrer')"
+              >
+                Github
+              </button>
             </div>
+          </div>
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img
+                src="./assets/asciiArt.png"
+                alt="project 4"
+                class="project-img"
+              />
+            </div>
+            <div class="experience-sub-title">ASCII Art Generator</div>
+            <div class="btn-container">
+              <button
+                class="btn btn-color-1 project-btn"
+                onclick="window.open('https://generateasciiart.netlify.app/' , '_blank', 'noopener, noreferrer')"
+              >
+                Live Demo
+              </button>
+              <button
+                class="btn btn-color-1 project-btn"
+                onclick="window.open('https://github.com/shubham-godleon/Ascii-Image-Generator' , '_blank', 'noopener, noreferrer')"
+              >
+                Github
+              </button>
+            </div>
+          </div>
         </div>
-        <img src="./assets/arrow.png" alt="arrow icon" class="icon arrow" onclick="location.href='#positions'">
+      </div>
+      <img
+        src="./assets/arrow.png"
+        alt="arrow icon"
+        class="icon arrow"
+        onclick="location.href='#positions'"
+      />
     </section>
     <section id="positions">
-        <p class="section__text__p1">Presenting My</p>
-        <h1 class="title">Leadership Roles</h1>
-        <div class="experience-details-container">
-            <div class="about-containers">
-                <div class="details-container color-container">
-                    <div class="article-container">
-                        <img src="./assets/Founder.png" alt="founder" class="position-img intern">
-                    </div>
-                    <div class="experience-sub-title">Intern Prep</div>
-                    <h2>Founder and President</h2>
-                </div>
-                <div class="details-container color-container">
-                    <div class="article-container">
-                        <img src="./assets/invictus.png" alt="president" class="position-img invictus">
-                    </div>
-                    <div class="experience-sub-title">Technical Council DTU </div> 
-                    <h2>President</h2>
-                </div>
-                <div class="details-container color-container">
-                    <div class="article-container">
-                        <img src="./assets/IEEE.png" alt="vicechairperson" class="position-img ieee">
-                    </div>
-                    <div class="experience-sub-title">IEEE Student Branch DTU</div>
-                    <h2>Vice-Chairperson</h2>
-                </div>
+      <p class="section__text__p1">Presenting My</p>
+      <h1 class="title">Leadership Roles</h1>
+      <div class="experience-details-container">
+        <div class="about-containers">
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img
+                src="./assets/Founder.png"
+                alt="founder"
+                class="position-img intern"
+              />
             </div>
+            <div class="experience-sub-title">Intern Prep</div>
+            <h2>Founder and President</h2>
+          </div>
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img
+                src="./assets/invictus.png"
+                alt="president"
+                class="position-img invictus"
+              />
+            </div>
+            <div class="experience-sub-title">Technical Council DTU</div>
+            <h2>President</h2>
+          </div>
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img
+                src="./assets/IEEE.png"
+                alt="vicechairperson"
+                class="position-img ieee"
+              />
+            </div>
+            <div class="experience-sub-title">IEEE Student Branch DTU</div>
+            <h2>Vice-Chairperson</h2>
+          </div>
         </div>
-        <img src="./assets/arrow.png" alt="arrow icon" class="icon arrow" onclick="location.href='#contact'">
+      </div>
+      <img
+        src="./assets/arrow.png"
+        alt="arrow icon"
+        class="icon arrow"
+        onclick="location.href='#contact'"
+      />
     </section>
     <section id="contact">
-        <p class="section__text__p1">To Get in Touch</p>
-        <h1 class="title">Contact Me</h1>
-        <div class="contact-info-upper-container">
-            <div class="contact-info-container">
-                <img src="./assets/insta.png" alt="insta icon" class="icon contact-icon insta-icon">
-                <p><a href="https://www.instagram.com/go.d.leon/"  target="_blank" rel="noopener noreferrer">Instagram</a></p>
-            </div>
-            <div class="contact-info-container">
-                <img src="./assets/email.png" alt="email icon" class="icon contact-icon email-icon">
-                <p><a href="mailto:shubhamkumar190699@gmail.com" target="_blank" rel="noopener noreferrer">shubhamkumar190699@gmail.com</a></p>
-            </div>
-            <div class="contact-info-container">
-                <img src="./assets/linkedin.png" alt="linkedin icon" class="icon contact-icon">
-                <p><a href="https://www.linkedin.com/in/shubham-kumar-83b39a168/" target="_blank" rel="noopener noreferrer">Linkedin</a></p>
-            </div>
+      <p class="section__text__p1">To Get in Touch</p>
+      <h1 class="title">Contact Me</h1>
+      <div class="contact-info-upper-container">
+        <div class="contact-info-container">
+          <img
+            src="./assets/insta.png"
+            alt="insta icon"
+            class="icon contact-icon insta-icon"
+          />
+          <p>
+            <a
+              href="https://www.instagram.com/go.d.leon/"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Instagram</a
+            >
+          </p>
         </div>
+        <div class="contact-info-container">
+          <img
+            src="./assets/email.png"
+            alt="email icon"
+            class="icon contact-icon email-icon"
+          />
+          <p>
+            <a
+              href="mailto:shubhamkumar190699@gmail.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              >shubhamkumar190699@gmail.com</a
+            >
+          </p>
+        </div>
+        <div class="contact-info-container">
+          <img
+            src="./assets/linkedin.png"
+            alt="linkedin icon"
+            class="icon contact-icon"
+          />
+          <p>
+            <a
+              href="https://www.linkedin.com/in/shubham-kumar-83b39a168/"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Linkedin</a
+            >
+          </p>
+        </div>
+      </div>
     </section>
     <footer>
-        <nav>
-            <div class="nav-links-container">
-                <ul class="nav-links">
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#experience">Experience</a></li>
-                    <li><a href="#projects">Projects</a></li>
-                    <li><a href="#positions">PORs</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                    <li><a href="./blog.html">Blog</a></li>
-                </ul>
-            </div>
-        </nav>
-        <p>Copyright &#169; 2024 GodleoN. All Rights Reserved.</p>
-        <div class="counter">Hello Visitor &nbsp;<a href="https://www.hitwebcounter.com" target="_blank">
-            <img src="https://hitwebcounter.com/counter/counter.php?page=10819906&style=0006&nbdigits=5&type=ip&initCount=0"
-                title="Counter Widget" Alt="Visit counter For Websites" border="0" /></a>.</div>
+      <nav>
+        <div class="nav-links-container">
+          <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#positions">PORs</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="./blog.html">Blog</a></li>
+          </ul>
+        </div>
+      </nav>
+      <p>Copyright &#169; 2024 GodleoN. All Rights Reserved.</p>
+      <div class="counter">
+        Hello Visitor &nbsp;<a
+          href="https://www.hitwebcounter.com"
+          target="_blank"
+        >
+          <img
+            src="https://hitwebcounter.com/counter/counter.php?page=10819906&style=0006&nbdigits=5&type=ip&initCount=0"
+            title="Counter Widget"
+            alt="Visit counter For Websites"
+            border="0" /></a
+        >.
+      </div>
     </footer>
     <script src="script.js"></script>
-</body>
+  </body>
 </html>
