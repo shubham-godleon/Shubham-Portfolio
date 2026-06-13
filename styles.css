@@ -481,6 +481,7 @@ article .icon {
 .blog-card:hover {
     border-color: rgb(53, 53, 53);
     background: rgb(250, 250, 250);
+    text-decoration: none;
 }
 
 .blog-doc-icon {
