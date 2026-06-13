@@ -1,6 +1,24 @@
 /* General Styling */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
 
+:root {
+    --bg-color: white;
+    --bg-color-secondary: rgb(250, 250, 250);
+    --text-color: black;
+    --text-color-secondary: rgb(85, 85, 85);
+    --border-color: rgb(163, 163, 163);
+    --accent-color: rgb(53, 53, 53);
+}
+
+[data-theme="dark"] {
+    --bg-color: rgb(18, 18, 18);
+    --bg-color-secondary: rgb(30, 30, 30);
+    --text-color: rgb(240, 240, 240);
+    --text-color-secondary: rgb(190, 190, 190);
+    --border-color: rgb(80, 80, 80);
+    --accent-color: rgb(210, 210, 210);
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -8,6 +26,9 @@
 
 body {
     font-family: 'Poppins', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    transition: background-color 300ms ease, color 300ms ease;
 }
 
 html {
@@ -15,7 +36,7 @@ html {
 }
 
 p {
-    color: rgb(85,85,85);
+    color: var(--text-color-secondary);
 }
 
 /* Transition */
@@ -43,13 +64,13 @@ nav {
 }
 
 a {
-    color: black;
+    color: var(--text-color);
     text-decoration: none;
-    text-decoration-color: white;
+    text-decoration-color: var(--bg-color);
 }
 
 a:hover {
-    color: grey;
+    color: var(--text-color-secondary);
     text-decoration: underline;
     text-underline-offset: 1rem;
     text-decoration-color: rgb(181, 181, 181);
@@ -63,6 +84,26 @@ a:hover {
     cursor: default;
 }
 
+/* Theme toggle */
+
+.theme-toggle {
+    background: none;
+    border: var(--border-color) 0.1rem solid;
+    border-radius: 50%;
+    width: 2.75rem;
+    height: 2.75rem;
+    font-size: 1.25rem;
+    cursor: pointer;
+    color: var(--text-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.theme-toggle:hover {
+    border-color: var(--accent-color);
+}
+
 /* Hamburger Menu */
 #hamburger-nav {
     display: none;
@@ -70,7 +111,9 @@ a:hover {
 
 .hamburger-menu {
     position: relative;
-    display: inline-block;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
 }
 
 .hamburger-icon {
@@ -85,7 +128,7 @@ a:hover {
 .hamburger-icon span{
     width: 100%;
     height: 2px;
-    background-color: black;
+    background-color: var(--text-color);
     transition: all 0.3 ease-in-out;
 }
 
@@ -93,11 +136,12 @@ a:hover {
     position: absolute;
     top: 100%;
     right: 0%;
-    background-color: white;
+    background-color: var(--bg-color);
     width: fit-content;
     max-height: 0;
     overflow: auto;
     transition: all 0.3 ease-in-out;
+    border-radius: 0.5rem;
 }
 
 .menu-links a{
@@ -105,7 +149,7 @@ a:hover {
     padding: 10px;
     text-align: center;
     font-size: 1.5rem;
-    color: black;
+    color: var(--text-color);
     text-decoration: none;
     transition: all 0.3 ease-in-out;
 }
@@ -216,6 +260,11 @@ section {
 .icon {
     cursor: pointer;
     height: 2rem;
+    transition: transform 250ms ease;
+}
+
+.icon:hover {
+    transform: translateY(-0.25rem) scale(1.1);
 }
 
 /* Buttons */
@@ -236,7 +285,7 @@ section {
 
 .btn-color-1,
 .btn-color-2 {
-    border: rgb(53, 53, 53) o.1rem solid;
+    border: var(--accent-color) 0.1rem solid;
 }
 
 .btn-color-1:hover,
@@ -250,17 +299,17 @@ section {
 }
 
 .btn-color-2:hover {
-    background: black;
+    background: var(--text-color);
 }
 
 .btn-color-1:hover,
 .btn-color-2 {
-    background: rgb(53, 53, 53);
-    color: white;
+    background: var(--accent-color);
+    color: var(--bg-color);
 }
 
 .btn-color-1:hover {
-    border: white 0.1rem solid;
+    border: var(--bg-color) 0.1rem solid;
 }
 
 .btn-container {
@@ -303,12 +352,19 @@ section {
 .details-container {
     padding: 1.5rem;
     flex: 1;
-    background: white;
+    background: var(--bg-color);
     border-radius: 2rem;
-    border: rgb(53, 53, 53) 0.1rem solid;
-    border-color: rgb(163, 163, 163);
-    text-align: center; 
+    border: var(--accent-color) 0.1rem solid;
+    border-color: var(--border-color);
+    text-align: center;
     height: 60%;
+    transition: transform 250ms ease, box-shadow 250ms ease, border-color 250ms ease;
+}
+
+.details-container:hover {
+    transform: translateY(-0.5rem);
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.12);
+    border-color: var(--accent-color);
 }
 
 /* Experience Section */
@@ -318,7 +374,7 @@ section {
 }
 
 .experience-sub-title {
-    color: rgb(85, 85, 85);
+    color: var(--text-color-secondary);
     font-weight: 600;
     font-size: 1.75rem;
     margin-bottom: 0.5rem;
@@ -370,8 +426,8 @@ article .icon {
 }
 
 .color-container {
-    border-color: rgb(163, 163, 163);
-    background: rgb(250, 250, 250);
+    border-color: var(--border-color);
+    background: var(--bg-color-secondary);
 }
 
 .project-img {
@@ -398,12 +454,12 @@ article .icon {
 
 .project-title {
     margin: 1rem;
-    color: black;
+    color: var(--text-color);
 }
 
 .project-btn {
-    color: black;
-    border-color: rgb(163, 163, 163);
+    color: var(--text-color);
+    border-color: var(--border-color);
 }
 
 /* positions */
@@ -411,6 +467,31 @@ article .icon {
 #positions {
     position: relative;
     margin-top: 8rem;
+}
+
+/* testimonials */
+
+#testimonials {
+    position: relative;
+    margin-top: 8rem;
+}
+
+.testimonial-card {
+    text-align: left;
+}
+
+.testimonial-quote {
+    font-style: italic;
+    margin-bottom: 1rem;
+}
+
+.testimonial-name {
+    color: var(--text-color);
+    font-size: 1.1rem;
+}
+
+.testimonial-role {
+    font-size: 0.9rem;
 }
 
 /* contact  */
@@ -426,9 +507,9 @@ article .icon {
     display: flex;
     justify-content: center;
     border-radius: 2rem;
-    border: rgb(53, 53, 53) 0.1 rem solid;
-    border-color: rgb(163, 163, 163);
-    background: rgb(250, 250, 250);
+    border: var(--accent-color) 0.1rem solid;
+    border-color: var(--border-color);
+    background: var(--bg-color-secondary);
     margin: 2rem auto;
     padding: 0.5rem;
 }
@@ -479,8 +560,8 @@ article .icon {
 }
 
 .blog-card:hover {
-    border-color: rgb(53, 53, 53);
-    background: rgb(250, 250, 250);
+    border-color: var(--accent-color);
+    background: var(--bg-color-secondary);
     text-decoration: none;
 }
 
@@ -488,7 +569,12 @@ article .icon {
     width: 2.5rem;
     height: 2.5rem;
     margin-bottom: 0.5rem;
-    color: rgb(53, 53, 53);
+    color: var(--accent-color);
+    transition: transform 250ms ease;
+}
+
+.blog-card:hover .blog-doc-icon {
+    transform: scale(1.1);
 }
 
 .blog-date {
@@ -519,14 +605,15 @@ footer p {
     text-align: center;
 }
 
-/* counter */
+/* scroll reveal */
 
-.counter {
-    font-size: 1rem;
-    text-align: right;
-    margin-top: 2rem;
+.reveal {
+    opacity: 0;
+    transform: translateY(2rem);
+    transition: opacity 600ms ease, transform 600ms ease;
 }
 
-.counter-img {
-    margin-top: 1%;
+.reveal.revealed {
+    opacity: 1;
+    transform: translateY(0);
 }

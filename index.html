@@ -9,37 +9,7 @@
     <link rel="stylesheet" href="mediaqueries.css" />
   </head>
   <body>
-    <nav id="desktop-nav">
-      <div class="logo">Shubham Kumar</div>
-      <div>
-        <ul class="nav-links">
-          <li><a href="#about">About</a></li>
-          <li><a href="#experience">Experience</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#positions">PORs</a></li>
-          <li><a href="#contact">Contact</a></li>
-          <li><a href="./blog.html">Blog</a></li>
-        </ul>
-      </div>
-    </nav>
-    <nav id="hamburger-nav">
-      <div class="logo">Shubham Kumar</div>
-      <div class="hamburger-menu">
-        <div class="hamburger-icon" onclick="toggleMenu()">
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
-        <div class="menu-links">
-          <li><a href="#about" onclick="toggleMenu()">About</a></li>
-          <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
-          <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
-          <li><a href="#positions" onclick="toggleMenu()">PORs</a></li>
-          <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
-          <li><a href="./blog.html" onclick="toggleMenu()">Blog</a></li>
-        </div>
-      </div>
-    </nav>
+    <div id="nav-placeholder"></div>
     <section id="profile">
       <div class="section__pic-container profile-pic">
         <img src="./assets/profile-pic.png" alt="profile picture" />
@@ -477,6 +447,44 @@
         src="./assets/arrow.png"
         alt="arrow icon"
         class="icon arrow"
+        onclick="location.href='#testimonials'"
+      />
+    </section>
+    <section id="testimonials">
+      <p class="section__text__p1">What People Say</p>
+      <h1 class="title">Testimonials</h1>
+      <div class="experience-details-container">
+        <div class="about-containers">
+          <div class="details-container color-container testimonial-card">
+            <p class="testimonial-quote">
+              "Shubham is an exceptional engineer with strong problem-solving
+              skills and a deep understanding of data structures, algorithms,
+              and system design. He breaks down complex problems with clarity
+              and precision, consistently delivering clean, scalable, and
+              maintainable solutions — a dependable teammate who thrives
+              under pressure."
+            </p>
+            <h3 class="testimonial-name">Rohit N.</h3>
+            <p class="testimonial-role">SDE-II @ Amazon, ex-Oracle, DTU '22</p>
+          </div>
+          <div class="details-container color-container testimonial-card">
+            <p class="testimonial-quote">
+              "Shubham worked with our team as an intern and was very
+              hardworking, bringing creative solutions to the problems on the
+              table. He blended well with the team and was always eager to
+              learn, accomplishing great work in a short span of time."
+            </p>
+            <h3 class="testimonial-name">Shubham Sinha</h3>
+            <p class="testimonial-role">
+              Performance Lead @ Sanofi, ex-Standard Chartered
+            </p>
+          </div>
+        </div>
+      </div>
+      <img
+        src="./assets/arrow.png"
+        alt="arrow icon"
+        class="icon arrow"
         onclick="location.href='#contact'"
       />
     </section>
@@ -531,33 +539,7 @@
         </div>
       </div>
     </section>
-    <footer>
-      <nav>
-        <div class="nav-links-container">
-          <ul class="nav-links">
-            <li><a href="#about">About</a></li>
-            <li><a href="#experience">Experience</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#positions">PORs</a></li>
-            <li><a href="#contact">Contact</a></li>
-            <li><a href="./blog.html">Blog</a></li>
-          </ul>
-        </div>
-      </nav>
-      <p>Copyright &#169; 2025 GodleoN. All Rights Reserved.</p>
-      <div class="counter">
-        Hello Visitor &nbsp;<a
-          href="https://www.hitwebcounter.com"
-          target="_blank"
-        >
-          <img
-            src="https://hitwebcounter.com/counter/counter.php?page=10819906&style=0006&nbdigits=5&type=ip&initCount=0"
-            title="Counter Widget"
-            alt="Visit counter For Websites"
-            border="0" /></a
-        >.
-      </div>
-    </footer>
+    <div id="footer-placeholder"></div>
     <script src="script.js"></script>
   </body>
 </html>
