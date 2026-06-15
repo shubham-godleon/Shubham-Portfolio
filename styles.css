@@ -281,6 +281,8 @@ section {
     padding: 1rem;
     width: 8rem;
     border-radius: 2rem;
+    appearance: none;
+    -webkit-appearance: none;
 }
 
 .btn-color-1,
@@ -295,7 +297,8 @@ section {
 }
 
 .btn-color-1 {
-    background: none;
+    background-color: var(--bg-color);
+    color: var(--text-color);
 }
 
 .btn-color-2:hover {
